@@ -84,7 +84,6 @@ defmodule AppWeb do
       # HTML escaping functionality
       import Phoenix.HTML
       # Core UI components and translation
-      import AppWeb.CoreComponents
       import AppWeb.Gettext
 
       # Shortcut for generating JS commands
