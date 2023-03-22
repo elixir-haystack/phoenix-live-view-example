@@ -44,7 +44,7 @@ defmodule App.Articles.Search do
   end
 
   @doc """
-  Perform a search
+  Perform a search.
   """
   def search(q) do
     Haystack.index(haystack(), :articles, fn index ->
