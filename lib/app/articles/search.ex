@@ -33,7 +33,7 @@ defmodule App.Articles.Search do
     Task.Supervisor.start_child(App.TaskSupervisor, fn ->
       Haystack.index(haystack(), :articles, fn index ->
         Articles.articles()
-        |> Stream.map(&Map.take(&1, ~w{id title body}a))
+        |> Stream.map(&Map.take(&1, ~w{id name body}a))
         |> Enum.each(&Haystack.Index.add(index, [&1]))
 
         index
